@@ -72,7 +72,8 @@ setTimeout(()=>{
     // 直接 call 後端，觸發自訂事件讓原版卡片更新
     btn.textContent = '搜尋中...';
     try {
-      const res = await fetch(BACKEND + '/api/search?region=' + encodeURIComponent(region));
+    //const res = await fetch(BACKEND + '/api/search?region=' + encodeURIComponent(region));
+      const res = await fetch(`${API}/api/search?region=${region}`)
       const data = await res.json();
       console.log('[NoMock] Real search', data);
       // 派一個事件，等原版如果有監聽可以用
