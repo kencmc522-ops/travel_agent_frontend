@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Travel Burst V4.2 - Famous Filtered, Clean UI</title>
-<script>window.__tw_suppress=true;</script><script src="https://cdn.tailwindcss.com"></script><script>if(window.console){ const _w=console.warn; console.warn=function(...a){ if(String(a[0]).includes("cdn.tailwindcss.com")) return; _w.apply(console,a); }; }</script>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
 *{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif}
 .card-hover .overlay{opacity:0; transition:.25s}
@@ -26,7 +26,7 @@
 
 <!-- 國家分組 -->
 
-<!-- V4.12 首頁 - 修復黑底bug -->
+<!-- V4.7 首頁 - 更多國家地區 -->
 <div id="homepage" class="bg-white rounded-[20px] p-6 border border-zinc-200 shadow-sm mb-6">
   <div class="flex items-center justify-between mb-4">
     <h2 class="font-black text-lg">🌏 首頁 - 探索更多國家與地區</h2>
@@ -36,90 +36,75 @@
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇯🇵 日本 Japan</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('東京')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="東京">東京</button>
-        <button onclick="quickSearch('大阪')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="大阪">大阪</button>
-        <button onclick="quickSearch('京都')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="京都">京都</button>
-        <button onclick="quickSearch('福岡')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="福岡">福岡</button>
-        <button onclick="quickSearch('北海道')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="北海道">北海道</button>
-        <button onclick="quickSearch('沖繩')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="沖繩">沖繩</button>
-        <button onclick="quickSearch('名古屋')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="名古屋">名古屋</button>
-        <button onclick="quickSearch('札幌')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="札幌">札幌</button>
+        <button onclick="quickSearch('東京')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">東京</button>
+        <button onclick="quickSearch('大阪')" class="px-2.5 py-1 bg-white border rounded-full text-xs">大阪</button>
+        <button onclick="quickSearch('京都')" class="px-2.5 py-1 bg-white border rounded-full text-xs">京都</button>
+        <button onclick="quickSearch('福岡')" class="px-2.5 py-1 bg-white border rounded-full text-xs">福岡</button>
+        <button onclick="quickSearch('北海道')" class="px-2.5 py-1 bg-white border rounded-full text-xs">北海道</button>
+        <button onclick="quickSearch('沖繩')" class="px-2.5 py-1 bg-white border rounded-full text-xs">沖繩</button>
+        <button onclick="quickSearch('名古屋')" class="px-2.5 py-1 bg-white border rounded-full text-xs">名古屋</button>
+        <button onclick="quickSearch('札幌')" class="px-2.5 py-1 bg-white border rounded-full text-xs">札幌</button>
       </div>
     </div>
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇰🇷 韓國 Korea</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('首爾')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="首爾">首爾</button>
-        <button onclick="quickSearch('釜山')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="釜山">釜山</button>
-        <button onclick="quickSearch('濟州島')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="濟州島">濟州島</button>
-        <button onclick="quickSearch('仁川')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="仁川">仁川</button>
-        <button onclick="quickSearch('大邱')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="大邱">大邱</button>
+        <button onclick="quickSearch('首爾')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">首爾</button>
+        <button onclick="quickSearch('釜山')" class="px-2.5 py-1 bg-white border rounded-full text-xs">釜山</button>
+        <button onclick="quickSearch('濟州島')" class="px-2.5 py-1 bg-white border rounded-full text-xs">濟州島</button>
+        <button onclick="quickSearch('仁川')" class="px-2.5 py-1 bg-white border rounded-full text-xs">仁川</button>
+        <button onclick="quickSearch('大邱')" class="px-2.5 py-1 bg-white border rounded-full text-xs">大邱</button>
       </div>
     </div>
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇹🇼 台灣 Taiwan</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('台北')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="台北">台北</button>
-        <button onclick="quickSearch('台中')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="台中">台中</button>
-        <button onclick="quickSearch('台南')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="台南">台南</button>
-        <button onclick="quickSearch('高雄')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="高雄">高雄</button>
-        <button onclick="quickSearch('花蓮')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="花蓮">花蓮</button>
-        <button onclick="quickSearch('九份')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="九份">九份</button>
+        <button onclick="quickSearch('台北')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">台北</button>
+        <button onclick="quickSearch('台中')" class="px-2.5 py-1 bg-white border rounded-full text-xs">台中</button>
+        <button onclick="quickSearch('台南')" class="px-2.5 py-1 bg-white border rounded-full text-xs">台南</button>
+        <button onclick="quickSearch('高雄')" class="px-2.5 py-1 bg-white border rounded-full text-xs">高雄</button>
+        <button onclick="quickSearch('花蓮')" class="px-2.5 py-1 bg-white border rounded-full text-xs">花蓮</button>
+        <button onclick="quickSearch('九份')" class="px-2.5 py-1 bg-white border rounded-full text-xs">九份</button>
       </div>
     </div>
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇹🇭 泰國 Thailand</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('曼谷')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="曼谷">曼谷</button>
-        <button onclick="quickSearch('清邁')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="清邁">清邁</button>
-        <button onclick="quickSearch('布吉')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="布吉">布吉</button>
-        <button onclick="quickSearch('芭堤雅')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="芭堤雅">芭堤雅</button>
+        <button onclick="quickSearch('曼谷')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">曼谷</button>
+        <button onclick="quickSearch('清邁')" class="px-2.5 py-1 bg-white border rounded-full text-xs">清邁</button>
+        <button onclick="quickSearch('布吉')" class="px-2.5 py-1 bg-white border rounded-full text-xs">布吉</button>
+        <button onclick="quickSearch('芭堤雅')" class="px-2.5 py-1 bg-white border rounded-full text-xs">芭堤雅</button>
       </div>
     </div>
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇭🇰 香港 / 🇸🇬 新加坡 / 🇻🇳 越南</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('香港')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="香港">香港</button>
-        <button onclick="quickSearch('中環')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="中環">中環</button>
-        <button onclick="quickSearch('尖沙咀')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="尖沙咀">尖沙咀</button>
-        <button onclick="quickSearch('新加坡')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="新加坡">新加坡</button>
-        <button onclick="quickSearch('胡志明市')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="胡志明市">胡志明市</button>
-        <button onclick="quickSearch('河內')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="河內">河內</button>
+        <button onclick="quickSearch('香港')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">香港</button>
+        <button onclick="quickSearch('中環')" class="px-2.5 py-1 bg-white border rounded-full text-xs">中環</button>
+        <button onclick="quickSearch('尖沙咀')" class="px-2.5 py-1 bg-white border rounded-full text-xs">尖沙咀</button>
+        <button onclick="quickSearch('新加坡')" class="px-2.5 py-1 bg-white border rounded-full text-xs">新加坡</button>
+        <button onclick="quickSearch('胡志明市')" class="px-2.5 py-1 bg-white border rounded-full text-xs">胡志明市</button>
+        <button onclick="quickSearch('河內')" class="px-2.5 py-1 bg-white border rounded-full text-xs">河內</button>
       </div>
     </div>
     <div class="p-3 bg-zinc-50 rounded-xl border">
       <div class="font-bold mb-2">🇲🇾 馬來西亞 / 🇮🇩 峇里</div>
       <div class="flex flex-wrap gap-1.5">
-        <button onclick="quickSearch('吉隆坡')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="吉隆坡">吉隆坡</button>
-        <button onclick="quickSearch('檳城')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="檳城">檳城</button>
-        <button onclick="quickSearch('峇里島')" class="px-2.5 py-1 bg-white border rounded-full text-xs region-btn" data-region="峇里島">峇里島</button>
+        <button onclick="quickSearch('吉隆坡')" class="px-2.5 py-1 bg-black text-white rounded-full text-xs">吉隆坡</button>
+        <button onclick="quickSearch('檳城')" class="px-2.5 py-1 bg-white border rounded-full text-xs">檳城</button>
+        <button onclick="quickSearch('峇里島')" class="px-2.5 py-1 bg-white border rounded-full text-xs">峇里島</button>
       </div>
     </div>
   </div>
-  <div class="mt-3 text-[11px] text-zinc-500">V4.12首頁：點擊即搜，支援8國32地區，一鍵切換。Method B已啟用：餐廳小紅書1.5倍 景點IG1.5倍 + 保底3反面</div>
+  <div class="mt-3 text-[11px] text-zinc-500">V4.7首頁：點擊即搜，支援8個國家32個地區，一鍵切換。Method B 平台-類別匹配已啟用：餐廳小紅書1.5倍 景點IG1.5倍</div>
 </div>
-
-
-<div id="searchStatus" class="hidden mb-4 p-4 bg-zinc-900 text-white rounded-[16px] flex items-center gap-3">
-  <div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-  <div class="flex-1">
-    <div class="font-bold text-sm" id="statusTitle">搜尋中...</div>
-    <div class="text-xs text-zinc-300" id="statusDesc">正在抓取 Google 真實數據 + Method B計算 + 保底3反面</div>
-  </div>
-  <div class="text-xs bg-white text-black px-3 py-1 rounded-full" id="statusMeta">地區 · 平台</div>
-</div>
-<div id="weightChangedBanner" class="hidden mb-4 p-3 bg-orange-100 border border-orange-300 rounded-xl flex items-center justify-between">
-  <div class="text-sm"><span class="font-bold">⚠️ 權重已調整</span> <span class="text-xs">需重搜先更新排名</span></div>
-  <button onclick="document.getElementById('mainSearchBtn').scrollIntoView({behavior:'smooth'});" class="text-xs bg-black text-white px-3 py-1 rounded-full">去搜尋 ↓</button>
-</div>
-<div id="selectedSummary" class="mb-4 p-3 bg-white border-2 border-black rounded-xl flex items-center justify-between">
-  <div class="text-sm flex items-center gap-2">
-    <span class="font-bold">已選：</span>
-    <span id="summaryRegion" class="bg-zinc-200 text-zinc-500 px-2.5 py-1 rounded-full text-xs">未選地區</span>
-    <span id="summaryPlatform" class="text-xs text-zinc-500">0個平台</span>
-  </div>
-  <div class="text-[11px] text-zinc-500" id="summaryAction">↓ 按下方黑色搜尋鍵開始</div>
-</div>
+<script>
+function quickSearch(region){
+  document.querySelector('input[type=text]')?.value && (document.querySelector('input[type=text]').value=region);
+  if(typeof searchRegion==='function'){ searchRegion(region); } else { const input=document.getElementById('regionInput'); if(input){ input.value=region; } const btn=document.getElementById('searchBtn'); if(btn) btn.click(); }
+  window.scrollTo({top:400, behavior:'smooth'});
+}
+</script>
 
 <div class="bg-white rounded-[20px] p-5 border border-zinc-200 shadow-sm">
 <h3 class="font-bold mb-3">1. 選擇地區 (文字分國家區)</h3>
@@ -184,15 +169,6 @@
 <div class="mt-2 text-[10px] text-zinc-500" id="weightFormula">公式: crossScore = Σ(平台勾選 * 滑桿權重%) * 2.5 → 最多10分 → 再 *0.25 計入總分</div>
 </div>
 </div>
-
-<div class="my-6 p-5 bg-black rounded-[20px] text-white flex flex-col md:flex-row items-center justify-between gap-4">
-  <div class="flex-1">
-    <div class="font-black text-lg">③ 開始搜尋</div>
-    <div class="text-xs text-zinc-300 mt-1" id="mainSearchDesc">已選 <span id="btnRegion">未選</span> · <span id="btnPlatform">0個平台</span> · 按此即時搜尋</div>
-  </div>
-  <button id="mainSearchBtn" onclick="handleMainSearch()" class="w-full md:w-auto px-8 py-3.5 bg-white text-black rounded-full font-black text-sm">🔍 開始搜尋真實景點+餐廳</button>
-</div>
-
 <script>
 function updateSliders(){
   // Disable slider if platform not checked
@@ -331,39 +307,36 @@ async function searchRegion(region){
 }
 
 
+
 function renderCard(item, kind){
   const reviews = item.reviews||{};
   let pos = (reviews.positive||[]).slice(0,3);
   let neg = (reviews.negative||[]).slice(0,3);
   const negMeta = reviews.negMeta||{};
   const scores = item.scores||{viral:{score:5}, cross:{score:5}, real:{score:5}, dist:{score:5}, final:5};
-  // V4.12 保底3反面
-  while(neg.length<3){
-    if(pos.length>0){
-      const lowest = pos[pos.length-1];
-      neg.push({text: lowest.text||'最低分正評轉入反面參考', author: lowest.author||'用戶', rating: lowest.rating||4, source: '最低分正評(★'+(lowest.rating||4)+')轉入反面 - 保證3條', isLowPos:true, isReal:false});
-    } else {
-      neg.push({text:'此地在Google僅'+(negMeta.totalReviews||5)+'條評論，真負評'+(negMeta.hasRealNeg||0)+'條，已全部顯示，系統補齊保證3反面', author:'系統', rating:3, source:'系統補齊', isPlaceholder:true});
-    }
-    if(neg.length>=3) break;
+  // V4.8.1: 如果無評論，顯示無評論提示，唔顯示系統假評
+  let posHtml = '';
+  let negHtml = '';
+  if((reviews.count||0)===0 || (!pos.length && !neg.length && !negMeta.isRealData)){
+    posHtml = `<div class="text-[11px] bg-zinc-100 border rounded-lg p-2 mb-1">此地Google暫無評論</div>`;
+    negHtml = `<div class="text-[11px] bg-zinc-100 border rounded-lg p-2 mb-1">此地Google暫無評論</div>`;
+  } else {
+    if(pos.length===0) posHtml = `<div class="text-[11px] bg-zinc-100 border rounded-lg p-2 mb-1">暫無正評</div>`;
+    else posHtml = pos.map(r=>`<div class="text-[11px] bg-green-50 border border-green-200 rounded-lg p-2 mb-1"><span class="font-bold text-green-700">✓ ${escapeHtml(r.source||'Google真評論')} ${r.rating? '★'+r.rating:''}</span> ${escapeHtml(r.author||'')} <br/>${escapeHtml(r.text||'')}</div>`).join('');
+    if(neg.length===0) negHtml = `<div class="text-[11px] bg-zinc-100 border rounded-lg p-2 mb-1">暫無負評，真負評0條</div>`;
+    else negHtml = neg.map((r,i)=>{
+      let bg='bg-red-50 border-red-200'; let tc='text-red-700'; let label='真負評';
+      if(r.isNeutral){ bg='bg-orange-50 border-orange-200'; tc='text-orange-700'; label='中性3★算入反面'; }
+      else if(r.isLowPos){ bg='bg-yellow-50 border-yellow-200'; tc='text-yellow-700'; label='最低分正評轉入'; }
+      return `<div class="text-[11px] ${bg} border rounded-lg p-2 mb-1"><span class="font-bold ${tc}">● [${i+1}] ${label} ${escapeHtml(r.source||'')} ${r.rating? '★'+r.rating:''}</span> ${escapeHtml(r.author||'')} <br/>${escapeHtml(r.text||'')}</div>`;
+    }).join('') + `<div class="text-[10px] mt-1 p-1.5 bg-zinc-900 text-white rounded-lg">✅真評：真負評${negMeta.hasRealNeg||0} | 中性${negMeta.hasNeu||0} | 正評${negMeta.hasRealPos||0} | 總${negMeta.totalReviews||0} | ${escapeHtml(negMeta.note||'')}</div>`;
   }
-  const posHtml = pos.map(r=>`<div class="text-[11px] bg-green-50 border border-green-200 rounded-lg p-2 mb-1"><span class="font-bold text-green-700">✓ ${escapeHtml(r.source||'Google真評論')} ${r.rating? '★'+r.rating:''}</span> ${escapeHtml(r.author||'')} <br/>${escapeHtml(r.text||'')} </div>`).join('');
-  const negHtml = neg.slice(0,3).map((r,i)=>{
-    let bg='bg-red-50 border-red-200'; let tc='text-red-700'; let label='真負評';
-    if(r.isPlaceholder){ bg='bg-zinc-100 border-zinc-300'; tc='text-zinc-600'; label='無更多負評-系統補齊'; }
-    else if(r.isNeutral){ bg='bg-orange-50 border-orange-200'; tc='text-orange-700'; label='中性3★補入反面'; }
-    else if(r.isLowPos){ bg='bg-yellow-50 border-yellow-200'; tc='text-yellow-700'; label='最低分正評轉入'; }
-    return `<div class="text-[11px] ${bg} border rounded-lg p-2 mb-1"><span class="font-bold ${tc}">● [${i+1}] ${label} ${escapeHtml(r.source||'')} ${r.rating? '★'+r.rating:''}</span> ${escapeHtml(r.author||'')} <br/>${escapeHtml(r.text||'')}</div>`;
-  }).join('') + `<div class="text-[10px] mt-1 p-1.5 bg-zinc-900 text-white rounded-lg">✅保底3反面：真負評${negMeta.hasRealNeg||0}條 | 中性${negMeta.hasNeu||0}條 | 總評論${negMeta.totalReviews||5}條 | ${escapeHtml(negMeta.note||'已補齊3反面')}</div>`;
-
   const isSelected = selected.has(item.id);
   const scoreBar = `<div class="mt-2 p-2 bg-zinc-50 rounded-xl border border-zinc-200 space-y-1"><div class="flex justify-between text-[10px] font-bold"><span>排名拆解 Method B</span><span class="bg-black text-white px-2 py-0.5 rounded-full">總分 ${scores.final||0}</span></div><div class="grid grid-cols-2 gap-1 text-[10px]"><div class="flex justify-between bg-white p-1 rounded"><span>🔥爆紅 40%</span><span class="font-bold">${scores.viral?.score||0}</span></div><div class="flex justify-between bg-white p-1 rounded"><span>✅交叉 25%</span><span class="font-bold">${scores.cross?.score||0}</span></div><div class="flex justify-between bg-white p-1 rounded"><span>💬真評 20%</span><span class="font-bold">${scores.real?.score||0}</span></div><div class="flex justify-between bg-white p-1 rounded"><span>📍距離 15%</span><span class="font-bold">${scores.dist?.score||0}</span></div></div></div>`;
-
-  return `<div class="card-hover relative bg-white rounded-[20px] overflow-hidden border ${isSelected?'border-black ring-2 ring-black':''} shadow-sm group cursor-pointer" onclick="toggleSelect('${item.id}')"><div class="relative h-44 overflow-hidden"><img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://picsum.photos/seed/${item.id}/600/400'"/><div class="absolute top-2 left-2 flex gap-1"><span class="text-[10px] bg-black text-white px-2 py-0.5 rounded-full">${escapeHtml(item.tag||'Google真實')}</span><span class="text-[10px] bg-white/90 px-2 py-0.5 rounded-full">${item.rating||4.3} ★ (${item.ratings_total||0})</span></div><div class="absolute top-2 right-2 text-[10px] bg-orange-500 text-white px-2 py-0.5 rounded-full font-bold">總 ${scores.final||0}</div></div><div class="p-3"><div class="font-bold text-sm line-clamp-1">${escapeHtml(item.name)}</div><div class="text-[11px] text-zinc-500 line-clamp-1">${escapeHtml(item.formatted_address||'')}</div>${scoreBar}</div><div class="overlay absolute inset-0 bg-white/98 backdrop-blur p-3 overflow-auto flex flex-col"><div class="font-bold text-sm mb-1">${escapeHtml(item.name)} <span class="text-xs bg-black text-white px-2 py-0.5 rounded-full">總分 ${scores.final||0}</span></div><div class="mb-2"><div class="text-[10px] font-bold text-green-700 mb-1">3個正面</div>${posHtml}</div><div class="mb-2"><div class="text-[10px] font-bold text-red-700 mb-1">3個反面 (保底)</div>${negHtml}</div><div class="mt-auto flex gap-2"><a href="${item.googleUrl||'#'}" target="_blank" class="flex-1 text-center text-[11px] bg-black text-white py-1.5 rounded-full" onclick="event.stopPropagation()">睇原評論 ↗</a><button class="flex-1 text-[11px] border py-1.5 rounded-full" onclick="event.stopPropagation(); toggleSelect('${item.id}')">${isSelected?'已選':'選擇'}</button></div></div></div>`;
+  return `<div class="card-hover relative bg-white rounded-[20px] overflow-hidden border ${isSelected?'border-black ring-2 ring-black':''} shadow-sm group cursor-pointer" onclick="toggleSelect('${item.id}')"><div class="relative h-44 overflow-hidden"><img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://picsum.photos/seed/${item.id}/600/400'"/><div class="absolute top-2 left-2 flex gap-1"><span class="text-[10px] bg-black text-white px-2 py-0.5 rounded-full">${escapeHtml(item.tag||'Google真實')}</span><span class="text-[10px] bg-white/90 px-2 py-0.5 rounded-full">${item.rating||4.3} ★ (${item.ratings_total||0})</span></div></div><div class="p-3"><div class="font-bold text-sm line-clamp-1">${escapeHtml(item.name)}</div><div class="text-[11px] text-zinc-500 line-clamp-1">${escapeHtml(item.formatted_address||'')}</div>${scoreBar}</div><div class="overlay absolute inset-0 bg-white/98 backdrop-blur p-3 overflow-auto flex flex-col"><div class="font-bold text-sm mb-1">${escapeHtml(item.name)}</div><div class="mb-2"><div class="text-[10px] font-bold text-green-700 mb-1">正面 (真評)</div>${posHtml}</div><div class="mb-2"><div class="text-[10px] font-bold text-red-700 mb-1">反面 (保底3條，真實)</div>${negHtml}</div><div class="mt-auto flex gap-2"><a href="${item.googleUrl||'#'}" target="_blank" class="flex-1 text-center text-[11px] bg-black text-white py-1.5 rounded-full" onclick="event.stopPropagation()">睇原評論 ↗</a><button class="flex-1 text-[11px] border py-1.5 rounded-full" onclick="event.stopPropagation(); toggleSelect('${item.id}')">${isSelected?'已選':'選擇'}</button></div></div></div>`;
 }
 
-function escapeHtml
-(s){ return (s||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function escapeHtml(s){ return (s||'').toString().replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
 
 function toggleSelect(id){
   if(selected.has(id)) selected.delete(id); else selected.add(id);
@@ -420,96 +393,5 @@ async function generateItinerary(){
 // auto search Busan on load
 window.onload=()=>{ searchRegion('釜山'); };
 </script>
-
-<script>
-// V4.12 修復 - 攔截 monitoring + 保底3反面 + 地區按鈕
-(function(){
-  const origFetch = window.fetch;
-  window.fetch = function(input, init){
-    try{
-      const u = typeof input === 'string' ? input : (input && input.url) ? input.url : '';
-      if(u.includes('/monitoring') || u.includes('o=450996') || u.includes('sentry.io') || u.includes('/ingest') || u.includes('vercel/insights')){
-        return Promise.resolve(new Response('{}', {status:200}));
-      }
-    }catch(e){}
-    return origFetch.apply(this, arguments);
-  };
-  const origWarn = console.warn;
-  console.warn = function(...a){
-    const msg = String(a[0]||'');
-    if(msg.includes('cdn.tailwindcss.com should not be used') || msg.includes('iframe which has both')) return;
-    return origWarn.apply(console, a);
-  };
-  const origError = console.error;
-  console.error = function(...a){
-    const msg = String(a[0]||'');
-    if(msg.includes('/monitoring') || msg.includes('ERR_BLOCKED_BY_CLIENT') || msg.includes('o=450996') || msg.includes('getPlatformWeights') ) {
-      // suppress known
-      if(msg.includes('getPlatformWeights')){ console.log('V4.12 auto-fix getPlatformWeights missing, defining'); }
-      else return;
-    }
-    return origError.apply(console, a);
-  };
-})();
-
-let selectedRegion = localStorage.getItem('tb_region') || '';
-function quickSearch(region){
-  try{
-    selectedRegion = region;
-    localStorage.setItem('tb_region', region);
-    document.querySelectorAll('.region-btn').forEach(b=>{
-      b.classList.remove('active','bg-black','text-white');
-      b.classList.add('bg-white','border');
-      const dr = b.dataset.region || '';
-      if(dr===region){
-        b.classList.add('active','bg-black','text-white');
-        b.classList.remove('bg-white');
-      }
-    });
-    const input = document.getElementById('regionInput');
-    if(input) input.value = region;
-    const sr = document.getElementById('summaryRegion'); if(sr){ sr.innerText=region; sr.className='bg-black text-white px-2.5 py-1 rounded-full text-xs'; }
-    const br = document.getElementById('btnRegion'); if(br) br.innerText=region;
-    const status = document.getElementById('searchStatus');
-    if(status){ status.classList.remove('hidden'); const t=document.getElementById('statusTitle'); if(t) t.innerText='搜尋中 '+region+' ...'; }
-    if(typeof searchRegion==='function'){ searchRegion(region); }
-    else if(typeof handleMainSearch==='function'){ handleMainSearch(); }
-  }catch(e){ console.error(e); }
-}
-function handleMainSearch(){
-  const region = selectedRegion || document.getElementById('regionInput')?.value || '釜山';
-  if(!region){ alert('請先選地區'); return; }
-  const status = document.getElementById('searchStatus');
-  if(status){ status.classList.remove('hidden'); }
-  if(typeof searchRegion==='function') searchRegion(region);
-}
-function updateSummary(){
-  const platforms = document.querySelectorAll('input[name=platform]:checked');
-  const regionText = selectedRegion || document.getElementById('regionInput')?.value || '未選地區';
-  const sr = document.getElementById('summaryRegion');
-  if(sr){ sr.innerText=regionText; if(regionText!=='未選地區') sr.className='bg-black text-white px-2.5 py-1 rounded-full text-xs'; }
-  const sp = document.getElementById('summaryPlatform'); if(sp) sp.innerText=platforms.length+'個平台';
-  const bp = document.getElementById('btnPlatform'); if(bp) bp.innerText=platforms.length+'個平台';
-  const br = document.getElementById('btnRegion'); if(br) br.innerText=regionText;
-}
-document.addEventListener('DOMContentLoaded', ()=>{
-  // Hook weights change
-  document.querySelectorAll('[id^=w_]').forEach(el=>{
-    el.addEventListener('input', ()=>{ const b=document.getElementById('weightChangedBanner'); if(b) b.classList.remove('hidden'); updateSummary(); });
-  });
-  document.querySelectorAll('input[name=platform]').forEach(cb=>{ cb.addEventListener('change', updateSummary); });
-  // Highlight saved region
-  if(selectedRegion){
-    document.querySelectorAll('.region-btn').forEach(b=>{ if(b.dataset.region===selectedRegion){ b.classList.add('active','bg-black','text-white'); b.classList.remove('bg-white'); } });
-  }
-  updateSummary();
-});
-</script>
-<style>
-.region-btn.active{ background:#000 !important; color:#fff !important; border-color:#000 !important; }
-.region-btn{ transition: all 0.2s; cursor:pointer; }
-.region-btn:hover{ background:#f4f4f5; }
-</style>
-
 </body>
 </html>
